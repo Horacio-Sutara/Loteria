@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Lotería — Sorteo de números</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <section id="config-screen" class="screen">
+      <h1>Lotería</h1>
+      <p class="subtitle">Configurá el rango de números a sortear (ambos límites incluidos).</p>
+      <form id="config-form">
+        <div class="field">
+          <label for="min-input">Mínimo</label>
+          <input type="number" id="min-input" step="1" required />
+        </div>
+        <div class="field">
+          <label for="max-input">Máximo</label>
+          <input type="number" id="max-input" step="1" required />
+        </div>
+        <p id="config-error" class="error" hidden></p>
+        <button type="submit" class="btn btn-primary">Comenzar sorteo</button>
+      </form>
+    </section>
+
+    <section id="draw-screen" class="screen" hidden>
+      <div class="top-bar">
+        <span id="range-label" class="range-label"></span>
+        <button id="reset-btn" class="btn btn-ghost">Reiniciar</button>
+      </div>
+
+      <button id="draw-area" class="draw-area" aria-label="Tocar para sortear un número">
+        <span id="current-number" class="ball ball-current">?</span>
+        <span id="draw-hint" class="draw-hint">Tocá para sortear</span>
+      </button>
+
+      <p id="pool-status" class="pool-status"></p>
+
+      <div class="history">
+        <h2>Números sorteados</h2>
+        <ol id="history-list" class="history-list"></ol>
+        <p id="history-empty" class="history-empty">Todavía no salió ningún número.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
