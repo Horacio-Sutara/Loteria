@@ -9,10 +9,3 @@ Abrí `index.html` directamente en el navegador, o serví la carpeta con cualqui
 ```
 npx serve .
 ```
-
-## Deploy en GitHub Pages
-
-1. Subí este proyecto a un repositorio de GitHub.
-2. En el repo, andá a **Settings → Pages**.
-3. En "Build and deployment", elegí **Deploy from a branch**, rama `main` (o `master`) y carpeta `/ (root)`.
-4. Guardá. GitHub te va a dar una URL tipo `https://<usuario>.github.io/<repo>/`.
